@@ -32,9 +32,9 @@ function cleanTextInMemory() {
     const textInMemory = JSON.parse(localStorage.getItem(STORAGE_KEY));
     console.log(textInMemory);
     if (textInMemory) {
-        refs.email.value = textInMemory.email;
+        refs.email.value = textInMemory.email || '';
         console.log(refs.email);
-        refs.textarea.value = textInMemory.message;
+        refs.textarea.value = textInMemory.message || '';
         console.log(refs.textarea);
     }
 }
